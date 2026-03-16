@@ -1,5 +1,5 @@
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI; // Для Legacy UI Text
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -8,7 +8,7 @@ public class PlayerHealth : MonoBehaviour
     private int currentHealth;
 
     [Header("UI")]
-    [SerializeField] private TextMeshProUGUI healthText; // Для TextMeshPro
+    [SerializeField] private Text healthText; // Ссылка на текст здоровья
 
     void Start()
     {
@@ -33,7 +33,7 @@ public class PlayerHealth : MonoBehaviour
     void Die()
     {
         Debug.Log("Игрок погиб!");
-        // Можно добавить перезагрузку сцены:
+        // перезагрузку сцены:
         // UnityEngine.SceneManagement.SceneManager.LoadScene(
         //     UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
@@ -42,7 +42,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (healthText != null)
         {
-            healthText.text = $" Здоровье: {currentHealth}/{maxHealth}";
+            healthText.text = $"Health: {currentHealth}/{maxHealth}";
         }
     }
 }

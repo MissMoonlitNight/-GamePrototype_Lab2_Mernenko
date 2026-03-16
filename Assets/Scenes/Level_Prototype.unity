@@ -1575,6 +1575,7 @@ GameObject:
   - component: {fileID: 1648237073}
   - component: {fileID: 1648237069}
   - component: {fileID: 1648237068}
+  - component: {fileID: 1648237074}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1715,6 +1716,20 @@ MonoBehaviour:
     m_Bits: 256
   groundCheckPoint: {fileID: 793208979}
   groundCheckRadius: 0.2
+--- !u!114 &1648237074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648237067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4663e6cf46776cb4abd57adea2e273eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  healthText: {fileID: 0}
 --- !u!1 &1662412357
 GameObject:
   m_ObjectHideFlags: 0
