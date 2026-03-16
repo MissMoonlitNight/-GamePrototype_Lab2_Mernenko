@@ -293,7 +293,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20693a14608503f469b820a28bbe1cd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints: []
+  waypoints:
+  - {fileID: 1595459504}
+  - {fileID: 1376987131}
+  - {fileID: 479741677}
   detectionRange: 10
   chaseRange: 12
   attackRange: 2
