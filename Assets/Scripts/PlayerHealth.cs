@@ -1,5 +1,6 @@
 using UnityEngine;
-using UnityEngine.UI; // Для Legacy UI Text
+using UnityEngine.UI;
+using UnityEngine.SceneManagement; // <-- Важно!
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class PlayerHealth : MonoBehaviour
     private int currentHealth;
 
     [Header("UI")]
-    [SerializeField] private Text healthText; // Ссылка на текст здоровья
+    [SerializeField] private Text healthText;
 
     void Start()
     {
@@ -32,10 +33,9 @@ public class PlayerHealth : MonoBehaviour
 
     void Die()
     {
-        Debug.Log("Игрок погиб!");
-        // перезагрузку сцены:
-        // UnityEngine.SceneManagement.SceneManager.LoadScene(
-        //     UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+        Debug.Log("ИГРОК ПОГИБ! Перезагрузка сцены...)"); // <-- Одна строка в консоль
+        UnityEngine.SceneManagement.SceneManager.LoadScene(
+            UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
 
     void UpdateHealthUI()
@@ -46,3 +46,5 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 }
+
+
